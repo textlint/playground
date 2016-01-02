@@ -1,6 +1,6 @@
 // LICENSE : MIT
 "use strict";
-import {element} from 'deku'
+import {element} from 'decca'
 import EnabledTextlintRuleList from "./EnabledTextlintRuleList";
 import DisabledTextlintRuleList from "./DisabledTextlintRuleList";
 import TextlintEditor from "./TextlintEditor"
@@ -9,9 +9,11 @@ const App = {
         const enabledRules = context.rules.filter(rule => rule.enable);
         const disabledRules = context.rules.filter(rule => !rule.enable);
         return <div class="App">
-            <EnabledTextlintRuleList rules={enabledRules}/>
-            <DisabledTextlintRuleList rules={disabledRules}/>
-            <TextlintEditor />
+            <div>
+                <EnabledTextlintRuleList rules={enabledRules}/>
+                <DisabledTextlintRuleList rules={disabledRules}/>
+            </div>
+            <TextlintEditor enabledRules={enabledRules}/>
         </div>
     }
 };

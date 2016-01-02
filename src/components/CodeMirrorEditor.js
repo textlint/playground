@@ -1,6 +1,6 @@
 // LICENSE : MIT
 "use strict";
-import {dom, element} from 'deku'
+import {dom, element} from 'decca'
 import CodeMirror from "codemirror"
 const mirrorMap = {};
 function mutateAfterMount(path, props) {
@@ -30,7 +30,7 @@ const CodeMirrorEditor = {
     },
     onUpdate({props, path}){
         const cm = mirrorMap[path];
-        if(cm) {
+        if (cm) {
             updateCmState(cm, props);
         }
     },

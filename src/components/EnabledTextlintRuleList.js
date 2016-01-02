@@ -1,6 +1,6 @@
 // LICENSE : MIT
 "use strict";
-import {element} from 'deku'
+import {element} from 'decca'
 import { toggleRule } from "../actions/textlintActions";
 // Dispatch an action when the button is clicked
 const dispatcherToggle = (dispatch, id) => event => {

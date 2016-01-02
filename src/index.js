@@ -1,4 +1,4 @@
-import {dom, element} from 'deku'
+import {dom, element} from 'decca'
 import { applyMiddleware, createStore } from 'redux';
 import createLogger from 'redux-logger';
 import textlintApp from './reducers/textlintReducer';

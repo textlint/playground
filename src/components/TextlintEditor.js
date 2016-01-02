@@ -1,6 +1,6 @@
 // LICENSE : MIT
 "use strict";
-import {element} from 'deku'
+import {element} from 'decca'
 import CodeMirrorEditor from "./CodeMirrorEditor"
 require("codemirror/addon/mode/overlay.js");
 require("codemirror/mode/xml/xml.js");
@@ -15,12 +15,21 @@ require("codemirror/addon/edit/continuelist.js");
 require("codemirror/addon/lint/lint.js");
 
 const createValidator = require("codemirror-textlint");
-const noTodo = require("textlint-rule-no-todo");
-const validator = createValidator({
-    rules: {"no-todo": noTodo}
-});
 export default {
     render({props}){
+        const {enabledRules} = props;
+        const rules = enabledRules.reduce((rules, rule) => {
+            rules[rule.name] = rule.rule;
+            return rules;
+        }, {});
+        const rulesOption = enabledRules.reduce((rules, rule) => {
+            rules[rule.name] = rule.options || true;
+            return rules;
+        }, {});
+        const validator = createValidator({
+            rules,
+            rulesOption
+        });
         const options = {
             lineWrapping: true,
             mode: "gfm",
