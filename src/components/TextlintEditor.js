@@ -13,20 +13,28 @@ require("codemirror/mode/clike/clike.js");
 require("codemirror/mode/meta.js");
 require("codemirror/addon/edit/continuelist.js");
 require("codemirror/addon/lint/lint.js");
+
+const createValidator = require("codemirror-textlint");
+const noTodo = require("textlint-rule-no-todo");
+const validator = createValidator({
+    rules: {"no-todo": noTodo}
+});
 export default {
     render({props}){
         const options = {
             lineWrapping: true,
             mode: "gfm",
             gutters: ["CodeMirror-lint-markers"],
-            //lint: {
-            //    "getAnnotations": validator,
-            //    "async": true
-            //},
-            //extraKeys: extraKeys
+            lint: {
+                "getAnnotations": validator,
+                "async": true
+            }
         };
+        var newVar = `# Textlint
+
+TODO: this is error by textlint-rule-no-todo`;
         return <div class="TextlintEditor">
-            <CodeMirrorEditor options={options}/>
+            <CodeMirrorEditor value={newVar} options={options}/>
         </div>
     }
 }

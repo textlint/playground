@@ -3,31 +3,38 @@
 import {dom, element} from 'deku'
 import CodeMirror from "codemirror"
 const mirrorMap = {};
-function mutateAfterMount(path, options) {
+function mutateAfterMount(path, props) {
     return ()=> {
         var textarea = document.getElementById(path);
-        mirrorMap[path] = CodeMirror.fromTextArea(textarea, options);
+        var cm = CodeMirror.fromTextArea(textarea);
+        updateCmState(cm, props);
+        mirrorMap[path] = cm;
     };
 }
-function updateCmState(cm, state) {
+function updateCmState(cm, nextProps) {
+    if (typeof nextProps.value === "string") {
+        cm.setValue(nextProps.value);
+    }
     // options
-    if (typeof state.options === 'object') {
-        Object.keys(state.options).forEach(optionName => {
-            if (state.options.hasOwnProperty(optionName)) {
-                cm.setOption(optionName, state.options[optionName]);
+    if (typeof nextProps.options === 'object') {
+        Object.keys(nextProps.options).forEach(optionName => {
+            if (nextProps.options.hasOwnProperty(optionName)) {
+                cm.setOption(optionName, nextProps.options[optionName]);
             }
         });
     }
 }
 const CodeMirrorEditor = {
     onCreate({path, props}){
-        const {options} = props;
-        requestAnimationFrame(mutateAfterMount(path, options));
+        requestAnimationFrame(mutateAfterMount(path, props));
     },
     onUpdate({props, path}){
         const cm = mirrorMap[path];
-        const {options} = props;
-        updateCmState(cm, options);
+        const {options, value} = props;
+        updateCmState(cm, {
+            value,
+            options
+        });
     },
     onRemove({path}){
         const cm = mirrorMap[path];

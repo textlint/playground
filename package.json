@@ -30,8 +30,10 @@
   },
   "dependencies": {
     "codemirror": "^5.10.0",
+    "codemirror-textlint": "^1.0.1",
     "deku": "^2.0.0-rc7",
-    "redux": "^3.0.5"
+    "redux": "^3.0.5",
+    "textlint-rule-no-todo": "^1.0.3"
   },
   "devDependencies": {
     "babel-plugin-transform-react-jsx": "^6.3.13",
