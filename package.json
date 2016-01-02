@@ -1,0 +1,43 @@
+{
+  "name": "textlint.github.io",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/textlint/textlint.github.io.git"
+  },
+  "author": "azu",
+  "email": "azuciao@gmail.com",
+  "homepage": "https://github.com/textlint/textlint.github.io",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/textlint/textlint.github.io/issues"
+  },
+  "version": "1.0.0",
+  "description": "textlint homepage.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "browserify src/index.js -o build.js",
+    "watch": "watchify -d src/index.js -o build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "dependencies": {
+    "codemirror": "^5.10.0",
+    "deku": "^2.0.0-rc7",
+    "redux": "^3.0.5"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-react-jsx": "^6.3.13",
+    "babel-preset-es2015": "^6.3.13",
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
+    "watchify": "^3.6.1"
+  }
+}
