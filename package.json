@@ -33,6 +33,7 @@
     "codemirror-textlint": "^1.0.1",
     "deku": "^2.0.0-rc7",
     "redux": "^3.0.5",
+    "redux-logger": "^2.3.1",
     "textlint-rule-no-todo": "^1.0.3"
   },
   "devDependencies": {

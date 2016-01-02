@@ -1,32 +1,27 @@
 import {dom, element} from 'deku'
-import {createStore} from 'redux'
+import { applyMiddleware, createStore } from 'redux';
+import createLogger from 'redux-logger';
 import textlintApp from './reducers/textlintReducer';
-import TextlintEditor from "./components/TextlintEditor"
+import App from "./components/App"
+import defaultRuleList from "./defaultRuleList";
+import { updateRuleList } from "./actions/textlintActions"
 const {createRenderer} = dom;
 
-// Dispatch an action when the button is clicked
-const log = dispatch => event => {
-    dispatch({
-        type: 'CLICKED'
-    })
-};
-
-// Define a state-less component
-const MyButton = {
-    render: ({ context, props, children, dispatch }) => {
-        console.log(context);
-        return <button onClick={log(dispatch)}>{children}</button>
-    }
-};
-
 // Create a Redux store to handle all UI actions and side-effects
-const store = createStore(textlintApp);
+
+const logger = createLogger();
+const createStoreWithMiddleware = applyMiddleware(logger)(createStore);
+const store = createStoreWithMiddleware(textlintApp);
 
 // Create a renderer that can turn vnodes into real DOM elements
 const render = createRenderer(document.body, store.dispatch);
 
 // Update the page and add redux state to the context
-render(
-    <TextlintEditor />,
-    store.getState()
-);
+store.subscribe(()=> {
+    render(
+        <App />,
+        store.getState()
+    );
+});
+// Update with initial data
+store.dispatch(updateRuleList(defaultRuleList));

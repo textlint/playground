@@ -30,11 +30,9 @@ const CodeMirrorEditor = {
     },
     onUpdate({props, path}){
         const cm = mirrorMap[path];
-        const {options, value} = props;
-        updateCmState(cm, {
-            value,
-            options
-        });
+        if(cm) {
+            updateCmState(cm, props);
+        }
     },
     onRemove({path}){
         const cm = mirrorMap[path];

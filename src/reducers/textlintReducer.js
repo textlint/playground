@@ -33,6 +33,6 @@ function ruleListReducer(ruleList = [], action) {
 }
 export default function textlintApp(state = {}, action) {
     return {
-        list: ruleListReducer(state.list, action)
+        rules: ruleListReducer(state.rules, action)
     };
 }
