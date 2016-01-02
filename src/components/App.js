@@ -10,6 +10,7 @@ const App = {
         const disabledRules = context.rules.filter(rule => !rule.enable);
         return <div class="App">
             <div>
+                <h2>Rule List</h2>
                 <EnabledTextlintRuleList rules={enabledRules}/>
                 <DisabledTextlintRuleList rules={disabledRules}/>
             </div>
