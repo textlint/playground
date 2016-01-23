@@ -3,9 +3,23 @@
 export const TOGGLE_RULE = "TOGGLE_RULE";
 export const ADD_RULE = "ADD_RULE";
 export const UPDATE_RULE_LIST = "UPDATE_RULE_LIST";
+export const UPDATE_RULE_ERRORS = "UPDATE_RULE_ERRORS";
 export const START_REQUEST = "START_REQUEST";
 export const SUCCESS_RESPONSE = "SUCCESS_RESPONSE";
 export const FAILURE_RESPONSE = "FAILURE_RESPONSE";
+export const UPDATE_TEXT = "UPDATE_TEXT";
+export function updateText(text) {
+    return {
+        type: UPDATE_TEXT,
+        text
+    }
+}
+export function updateRuleErrors(errors) {
+    return {
+        type: UPDATE_RULE_ERRORS,
+        errors
+    }
+}
 export function updateRuleList(rules) {
     return {
         type: UPDATE_RULE_LIST,

@@ -9,11 +9,18 @@ function mutateAfterMount(path, props) {
         var cm = CodeMirror.fromTextArea(textarea);
         updateCmState(cm, props);
         mirrorMap[path] = cm;
+
+        if (typeof props["onChange"] === "function") {
+            cm.on('change', props["onChange"]);
+        }
     };
 }
 function updateCmState(cm, nextProps) {
     if (typeof nextProps.value === "string") {
-        cm.setValue(nextProps.value);
+        const currentValue = cm.getValue();
+        if(currentValue !== nextProps.value) {
+            cm.setValue(nextProps.value);
+        }
     }
     // options
     if (typeof nextProps.options === 'object') {

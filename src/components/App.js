@@ -5,6 +5,7 @@ import EnabledTextlintRuleList from "./EnabledTextlintRuleList";
 import DisabledTextlintRuleList from "./DisabledTextlintRuleList";
 import AddTextlintRule from "./AddTextlintRule";
 import TextlintEditor from "./TextlintEditor"
+import TextlintErrorList from "./TextlintErrorList"
 const App = {
     render({context}){
         const enabledRules = context.rules.filter(rule => rule.enable);
@@ -16,7 +17,8 @@ const App = {
                 <DisabledTextlintRuleList rules={disabledRules}/>
                 <AddTextlintRule />
             </div>
-            <TextlintEditor enabledRules={enabledRules}/>
+            <TextlintEditor enabledRules={enabledRules} value={context.text} />
+            <TextlintErrorList errors={context.ruleErrors}/>
         </div>
     }
 };
