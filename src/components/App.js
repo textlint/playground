@@ -3,6 +3,7 @@
 import {element} from 'decca'
 import EnabledTextlintRuleList from "./EnabledTextlintRuleList";
 import DisabledTextlintRuleList from "./DisabledTextlintRuleList";
+import AddTextlintRule from "./AddTextlintRule";
 import TextlintEditor from "./TextlintEditor"
 const App = {
     render({context}){
@@ -13,6 +14,7 @@ const App = {
                 <h2>Rule List</h2>
                 <EnabledTextlintRuleList rules={enabledRules}/>
                 <DisabledTextlintRuleList rules={disabledRules}/>
+                <AddTextlintRule />
             </div>
             <TextlintEditor enabledRules={enabledRules}/>
         </div>

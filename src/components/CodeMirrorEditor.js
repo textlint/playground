@@ -4,7 +4,7 @@ import {dom, element} from 'decca'
 import CodeMirror from "codemirror"
 const mirrorMap = {};
 function mutateAfterMount(path, props) {
-    return ()=> {
+    return () => {
         var textarea = document.getElementById(path);
         var cm = CodeMirror.fromTextArea(textarea);
         updateCmState(cm, props);

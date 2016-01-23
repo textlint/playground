@@ -1,10 +1,10 @@
 import {dom, element} from 'decca'
-import { applyMiddleware, createStore } from 'redux';
+import {applyMiddleware, createStore} from 'redux';
 import createLogger from 'redux-logger';
 import textlintApp from './reducers/textlintReducer';
 import App from "./components/App"
 import defaultRuleList from "./defaultRuleList";
-import { updateRuleList } from "./actions/textlintActions"
+import {updateRuleList} from "./actions/textlintActions"
 const {createRenderer} = dom;
 
 // Create a Redux store to handle all UI actions and side-effects

@@ -1,8 +1,8 @@
 // LICENSE : MIT
 "use strict";
-import {TOGGLE_RULE, UPDATE_RULE_LIST} from "../actions/textlintActions";
+import {TOGGLE_RULE, UPDATE_RULE_LIST, ADD_RULE} from "../actions/textlintActions";
 
-const ruleObject = {
+const _______ruleObject = {
     id: 0,
     enable: true,
     name: "",
@@ -18,11 +18,25 @@ function toggleRule(rule, action) {
         enable: !rule.enable
     });
 }
+function addRule(ruleList, ruleName, rule) {
+    var rules = ruleList.slice();
+    var ruleObject = {
+        id: ruleName,
+        enable: true,
+        name: ruleName,
+        rule
+    };
+    console.log(ruleObject);
+    rules.push(ruleObject);
+    return rules;
+}
 /*
     list: []
  */
 function ruleListReducer(ruleList = [], action) {
     switch (action.type) {
+        case ADD_RULE:
+            return addRule(ruleList, action.ruleName, action.rule);
         case UPDATE_RULE_LIST:
             return action.rules.slice();
         case TOGGLE_RULE:
