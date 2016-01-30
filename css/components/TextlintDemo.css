@@ -1,0 +1,30 @@
+/* TextlintDemo
+
+    TextlintDemo-Content
+    | TextlintEditor | TextlintErrorList|
+    -------------------------------------
+    TextlintDemo-Setting
+*/
+
+.TextlintDemo {
+    display: flex;
+    flex-direction: column;
+}
+
+.TextlintDemo .TextlintDemo-Setting {
+
+}
+
+.TextlintDemo-Content {
+    display: flex;
+}
+
+.TextlintDemo-Content .TextlintEditor {
+    flex: 2;
+    border: 1px solid #ddd;
+}
+
+.TextlintDemo-Content .TextlintErrorList {
+    flex: 1;
+    border: 1px solid #ddd;
+}

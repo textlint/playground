@@ -1,24 +1,18 @@
 // LICENSE : MIT
 "use strict";
 import {element} from 'decca'
-import EnabledTextlintRuleList from "./EnabledTextlintRuleList";
-import DisabledTextlintRuleList from "./DisabledTextlintRuleList";
-import AddTextlintRule from "./AddTextlintRule";
-import TextlintEditor from "./TextlintEditor"
-import TextlintErrorList from "./TextlintErrorList"
+import {TextlintDemo} from "./TextlintDemo";
+import {Header} from "./Header";
 const App = {
     render({context}){
         const enabledRules = context.rules.filter(rule => rule.enable);
         const disabledRules = context.rules.filter(rule => !rule.enable);
+        const {text, ruleErrors} = context;
         return <div class="App">
-            <div>
-                <h2>Rule List</h2>
-                <EnabledTextlintRuleList rules={enabledRules}/>
-                <DisabledTextlintRuleList rules={disabledRules}/>
-                <AddTextlintRule />
-            </div>
-            <TextlintEditor enabledRules={enabledRules} value={context.text} />
-            <TextlintErrorList errors={context.ruleErrors}/>
+            <Header />
+            <TextlintDemo enabledRules={enabledRules} disabledRules={disabledRules}
+                         ruleErrors={ruleErrors}
+                         text={text}/>
         </div>
     }
 };

@@ -1,7 +1,7 @@
 // LICENSE : MIT
 "use strict";
 import {element} from 'decca'
-import {addRule, startRequest, failureResponse, successResponse} from "../actions/textlintActions";
+import {addRule, startRequest, failureResponse, successResponse} from "../../actions/textlintActions";
 import camelCase from 'camelcase';
 // Dispatch an action when the button is clicked
 const fetchModule = (dispatch, moduleName) => {

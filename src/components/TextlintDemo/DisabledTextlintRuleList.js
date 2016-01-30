@@ -1,15 +1,14 @@
 // LICENSE : MIT
 "use strict";
 import {element} from 'decca'
-import { toggleRule } from "../actions/textlintActions";
-// Dispatch an action when the button is clicked
+import { toggleRule } from "../../actions/textlintActions";
 const dispatcherToggle = (dispatch, id) => event => {
     dispatch(toggleRule(id))
 };
 const RuleItem = {
     render({props, dispatch}){
         const { rule } = props;
-        return <li><p onClick={dispatcherToggle(dispatch, rule.id)}>{rule.name}</p></li>
+        return <li><p onClick={dispatcherToggle(dispatch, rule.id)}><del>{rule.name}</del></p></li>
     }
 };
 export default {
@@ -17,7 +16,7 @@ export default {
         const ruleItems = props.rules.map(rule => {
             return <RuleItem key={rule.id} rule={rule}/>
         });
-        return <div class="EnabledTextlintRuleList">
+        return <div class="DisabledTextlintRuleList">
             <ul>
                 {ruleItems}
             </ul>

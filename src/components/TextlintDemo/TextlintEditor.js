@@ -2,7 +2,7 @@
 "use strict";
 import {element} from 'decca'
 import CodeMirrorEditor from "./CodeMirrorEditor"
-import {updateRuleErrors, updateText} from "../actions/textlintActions"
+import {updateRuleErrors, updateText} from "../../actions/textlintActions"
 import {TextLintCore} from "textlint"
 require("codemirror/addon/mode/overlay.js");
 require("codemirror/mode/xml/xml.js");

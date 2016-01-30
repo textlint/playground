@@ -1,7 +1,7 @@
 // LICENSE : MIT
 "use strict";
 import {element} from 'decca'
-import {toggleRule} from "../actions/textlintActions";
+import {toggleRule} from "../../actions/textlintActions";
 export default {
     render({props}){
         const errorList = props.errors.map(error => {
