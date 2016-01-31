@@ -1,6 +1,7 @@
 // LICENSE : MIT
 "use strict";
 import {element} from 'decca'
+import debounce from "lodash.debounce"
 import CodeMirrorEditor from "./CodeMirrorEditor"
 import {updateRuleErrors, updateText} from "../../actions/textlintActions"
 import {TextLintCore} from "textlint"
@@ -17,20 +18,14 @@ require("codemirror/addon/edit/continuelist.js");
 require("codemirror/addon/lint/lint.js");
 
 const createValidator = require("codemirror-textlint");
-const onChange = (textlint, dispatch) => {
-    let isLocked = false;
-    return (cm) => {
-        if (isLocked) {
-            return;
-        }
-        const value = cm.getValue();
+const textlint = new TextLintCore();
+const onChange = (dispatch) => {
+    return (text) => {
+        const value = text;
         dispatch(updateText(value));
-        isLocked = true;
         textlint.lintMarkdown(value).then(result => {
             dispatch(updateRuleErrors(result.messages));
             return result;
-        }).finally(()=> {
-            isLocked = false;
         });
     }
 };
@@ -49,7 +44,6 @@ export default {
             rules,
             rulesOption
         });
-        const textlint = new TextLintCore();
         textlint.setupRules(rules, rulesOption);
         const options = {
             lineNumbers: true,
@@ -61,9 +55,10 @@ export default {
                 "async": true
             }
         };
+        const onChangeHandler = debounce(onChange(dispatch), 1000);
         return <div class="TextlintEditor">
-            <CodeMirrorEditor value={props.value} options={options} onChange={(cm)=>{
-            return onChange(textlint,dispatch)(cm);
+            <CodeMirrorEditor value={props.value} options={options} onChange={(cm)=> {
+                return onChangeHandler(cm.getValue());
             }}/>
         </div>
     }

@@ -8,6 +8,7 @@
 @import "./components/Leading.css";
 @import "./components/TextlintDemo.css";
 @import "./components/TextlintRuleListItem.css";
+@import "./components/TextlintRuleListSet.css";
 @import "./components/EnabledTextlintRuleList.css";
 @import "./components/DisabledTextlintRuleList.css";
 /* Utils */

@@ -17,8 +17,10 @@ export const TextlintDemo = {
                 <div className="TextlintDemo-Setting l-flex-right-half l-flex-container l-flex-col">
                     <div className="TextlintDemo-ruleBox l-flex-top-half">
                         <h3>Rule Lists</h3>
-                        <EnabledTextlintRuleList rules={enabledRules}/>
-                        <DisabledTextlintRuleList rules={disabledRules}/>
+                        <div className="TextlintRuleListSet">
+                            <EnabledTextlintRuleList rules={enabledRules}/>
+                            <DisabledTextlintRuleList rules={disabledRules}/>
+                        </div>
                         <AddTextlintRule />
                     </div>
                     <div className="TextlintDemo-errorBox l-flex-bottom-half">
