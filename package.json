@@ -20,14 +20,8 @@
   },
   "scripts": {
     "build:css": "suitcss --import-root css/ css/index.css build.css",
-    "build": "browserify src/index.js -o build.js",
-    "watch": "watchify -d src/index.js -o build.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "browserify": {
-    "transform": [
-      "babelify"
-    ]
+    "build": "webpack -p",
+    "watch": "webpack -d --watch"
   },
   "dependencies": {
     "camelcase": "^2.0.1",
@@ -45,12 +39,12 @@
     "textlint-rule-sjsj": "^1.0.5"
   },
   "devDependencies": {
+    "babel-loader": "^6.2.1",
     "babel-plugin-transform-react-jsx": "^6.3.13",
     "babel-preset-es2015": "^6.3.13",
-    "babelify": "^7.2.0",
-    "browserify": "^13.0.0",
+    "json-loader": "^0.5.4",
     "suitcss-preprocessor": "^0.8.0",
     "suitcss-utils": "^0.12.0",
-    "watchify": "^3.6.1"
+    "webpack": "^2.0.6-beta"
   }
 }
