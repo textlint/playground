@@ -51,7 +51,6 @@ const CodeMirrorEditor = {
         }
     },
     render({path}){
-        console.log(path);
         return <div class="CodeMirrorEditor">
             <textarea id={path}></textarea>
         </div>

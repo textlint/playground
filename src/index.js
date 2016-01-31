@@ -8,9 +8,13 @@ import {updateRuleList} from "./actions/textlintActions"
 const {createRenderer} = dom;
 
 // Create a Redux store to handle all UI actions and side-effects
+const middlewares = [];
+if (process.env.NODE_ENV === `development`) {
+    const logger = createLogger();
+    middlewares.push(logger);
+}
 
-const logger = createLogger();
-const createStoreWithMiddleware = applyMiddleware(logger)(createStore);
+const createStoreWithMiddleware = applyMiddleware(...middlewares)(createStore);
 const store = createStoreWithMiddleware(textlintApp);
 
 // Create a renderer that can turn vnodes into real DOM elements
