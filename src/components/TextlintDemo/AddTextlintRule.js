@@ -50,7 +50,7 @@ export default {
                 event.preventDefault();
                 onSubmit(dispatch, path);
             }}>
-                <label>Add textlint rule:</label>
+                <label>Add textlint rule: </label>
                 <input type="text" id={path} placeholder="textlint-rule-no-todo"></input>
                 <input type="submit">Add Rule</input>
             </form>

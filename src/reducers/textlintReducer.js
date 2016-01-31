@@ -59,7 +59,16 @@ function ruleErrorReducer(errors = [], action) {
 
 const defaultText = `# Textlint
 
-TODO: this is error by textlint-rule-no-todo`;
+The pluggable linting tool for text and markdown.
+
+TODO: this is error by textlint-rule-no-todo
+
+You try to input text then textlint lint the text using loaded rules.
+
+
+
+
+`;
 function textReducer(text = defaultText, action) {
     switch (action.type) {
         case UPDATE_TEXT:

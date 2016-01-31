@@ -1,0 +1,10 @@
+/*
+    Body
+    |<--32-->E              |
+    |              E<--32-->|
+
+*/
+:root {
+    --right-end-padding: 32px;
+    --left-start-padding: 32px;
+}

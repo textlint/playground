@@ -1,12 +1,13 @@
+@import "./var-layout.css";
 .Header {
     background-color: #FBFBFB;
-    padding: 5px 1rem;
+    padding: 5px 0;
     display: flex;
 }
 
 .Header .Logo {
     margin-right: auto;
-    padding: 0.5rem 0;
+    padding: 0.5rem var(--left-start-padding);
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
@@ -18,20 +19,37 @@
     justify-content: flex-end;
     align-items: center;
     flex-direction: row;
+    /**/
+    padding-right: var(--right-end-padding);
 }
 
 .HeaderMenus, .HeaderMenuItem {
     display: inline-block;
 }
 
-.HeaderMenuItem {
-    padding: 0.625rem 1rem;
-}
-
 .HeaderMenuNav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+/*
+    | E <p> E <p> E |
+*/
+.HeaderMenuItem {
+    padding: 0.625rem 1rem;
+}
+
+.HeaderMenuItem:first-child {
+    padding-left: 0;
+}
+
+.HeaderMenuItem:last-child {
+    padding-right: 0;
+}
+/* link color*/
+.HeaderMenuItem a {
+    color: #0F0F0F;
 }
 
 .Logo-img {

@@ -1,6 +1,13 @@
+@import "./color.css";
 /* Layout*/
 @import "./layout/Body.css";
+@import "./layout/TextlintDemo.css";
 /* Components */
 @import "./components/App.css";
 @import "./components/Header.css";
 @import "./components/TextlintDemo.css";
+@import "./components/TextlintRuleListItem.css";
+@import "./components/EnabledTextlintRuleList.css";
+@import "./components/DisabledTextlintRuleList.css";
+/* Utils */
+@import "./utils/padding.css"

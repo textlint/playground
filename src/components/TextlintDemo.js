@@ -10,15 +10,22 @@ export const TextlintDemo = {
     render({props}){
         const {enabledRules, disabledRules, ruleErrors, text} = props;
         return <div className="TextlintDemo">
-            <div className="TextlintDemo-Content">
-                <TextlintEditor enabledRules={enabledRules} value={text}/>
-                <TextlintErrorList errors={ruleErrors}/>
-            </div>
-            <div className="TextlintDemo-Setting">
-                <h2>Rule List</h2>
-                <EnabledTextlintRuleList rules={enabledRules}/>
-                <DisabledTextlintRuleList rules={disabledRules}/>
-                <AddTextlintRule />
+            <div className="TextlintDemo-Content l-flex-container l-flex-row">
+                <div className="TextlintDemo-Editor l-flex-left-half">
+                    <TextlintEditor enabledRules={enabledRules} value={text}/>
+                </div>
+                <div className="TextlintDemo-Setting l-flex-right-half l-flex-container l-flex-col">
+                    <div className="TextlintDemo-ruleBox l-flex-top-half">
+                        <h3>Rule Lists</h3>
+                        <EnabledTextlintRuleList rules={enabledRules}/>
+                        <DisabledTextlintRuleList rules={disabledRules}/>
+                        <AddTextlintRule />
+                    </div>
+                    <div className="TextlintDemo-errorBox l-flex-bottom-half">
+                        <h3>Rule Errors</h3>
+                        <TextlintErrorList errors={ruleErrors}/>
+                    </div>
+                </div>
             </div>
         </div>
     }
