@@ -9,7 +9,9 @@ function mutateAfterMount(path, props) {
         var cm = CodeMirror.fromTextArea(textarea);
         updateCmState(cm, props);
         mirrorMap[path] = cm;
-
+        if (typeof props.defaultValue === "string") {
+            cm.setValue(props.defaultValue);
+        }
         if (typeof props["onChange"] === "function") {
             cm.on('change', props["onChange"]);
         }
@@ -18,7 +20,7 @@ function mutateAfterMount(path, props) {
 function updateCmState(cm, nextProps) {
     if (typeof nextProps.value === "string") {
         const currentValue = cm.getValue();
-        if(currentValue !== nextProps.value) {
+        if (currentValue !== nextProps.value) {
             cm.setValue(nextProps.value);
         }
     }
@@ -49,6 +51,7 @@ const CodeMirrorEditor = {
         }
     },
     render({path}){
+        console.log(path);
         return <div class="CodeMirrorEditor">
             <textarea id={path}></textarea>
         </div>

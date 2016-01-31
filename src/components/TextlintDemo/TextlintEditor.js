@@ -22,7 +22,6 @@ const textlint = new TextLintCore();
 const onChange = (dispatch) => {
     return (text) => {
         const value = text;
-        dispatch(updateText(value));
         textlint.lintMarkdown(value).then(result => {
             dispatch(updateRuleErrors(result.messages));
             return result;
@@ -57,7 +56,7 @@ export default {
         };
         const onChangeHandler = debounce(onChange(dispatch), 1000);
         return <div class="TextlintEditor">
-            <CodeMirrorEditor value={props.value} options={options} onChange={(cm)=> {
+            <CodeMirrorEditor defaultValue={props.value} options={options} onChange={(cm)=> {
                 return onChangeHandler(cm.getValue());
             }}/>
         </div>
