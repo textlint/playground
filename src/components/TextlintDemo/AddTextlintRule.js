@@ -50,10 +50,11 @@ export default {
                 event.preventDefault();
                 onSubmit(dispatch, path);
             }}>
-                <label>Add textlint rule: </label>
+                <label>Add <a href="https://github.com/azu/textlint/wiki/Collection-of-textlint-rule">textlint rule</a>: </label>
                 <input type="text" id={path} placeholder="textlint-rule-no-todo"></input>
                 <input type="submit">Add Rule</input>
             </form>
+
         </div>
     }
 }

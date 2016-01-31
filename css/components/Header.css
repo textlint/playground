@@ -1,3 +1,4 @@
+@import "../color.css";
 @import "./var-layout.css";
 .Header {
     background-color: #FBFBFB;
@@ -49,7 +50,7 @@
 }
 /* link color*/
 .HeaderMenuItem a {
-    color: #0F0F0F;
+    color: var(--MenuLinkColor);
 }
 
 .Logo-img {

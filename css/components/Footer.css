@@ -1,0 +1,15 @@
+@import "../color.css";
+
+.Footer-list {
+    padding-left: 0;
+    list-style: outside none none;
+}
+
+.Footer-list-item {
+    display: inline-block;
+    padding-left: 1rem;
+}
+
+.Footer-list-item a {
+    color: var(--MenuLinkColor);
+}

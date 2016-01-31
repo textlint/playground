@@ -3,8 +3,12 @@
 import {element} from 'decca'
 const menuItems = [
     {
+        "title": "Rules",
+        "url": "https://github.com/azu/textlint/wiki/Collection-of-textlint-rule"
+    },
+    {
         "title": "Document",
-        "url": "https://github.com/textlint/textlint"
+        "url": "https://github.com/textlint/textlint/tree/master/docs"
     },
     {
         "title": "GitHub",
