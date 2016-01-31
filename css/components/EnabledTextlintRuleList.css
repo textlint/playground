@@ -1,4 +1,7 @@
-
 .EnabledTextlintRuleListBox, .EnabledTextlintRuleList {
     margin: 0;
+}
+
+.EnabledTextlintRuleList {
+    padding-left: 32px;
 }
