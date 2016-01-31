@@ -5,6 +5,7 @@
 /* Components */
 @import "./components/App.css";
 @import "./components/Header.css";
+@import "./components/Leading.css";
 @import "./components/TextlintDemo.css";
 @import "./components/TextlintRuleListItem.css";
 @import "./components/EnabledTextlintRuleList.css";

@@ -3,6 +3,7 @@
 import {element} from 'decca'
 import {TextlintDemo} from "./TextlintDemo";
 import {Header} from "./Header";
+import {Leading} from "./Leading";
 const App = {
     render({context}){
         const enabledRules = context.rules.filter(rule => rule.enable);
@@ -10,6 +11,7 @@ const App = {
         const {text, ruleErrors} = context;
         return <div class="App">
             <Header />
+            <Leading />
             <TextlintDemo enabledRules={enabledRules} disabledRules={disabledRules}
                          ruleErrors={ruleErrors}
                          text={text}/>

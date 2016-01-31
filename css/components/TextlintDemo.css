@@ -38,7 +38,7 @@
     padding-right: var(--right-end-padding);
     text-align: right;
     background-color: #f4f4f4;
-    color: #0F0F0F;
+    color: var(--TextColor);
 }
 
 .CodeMirrorEditor {

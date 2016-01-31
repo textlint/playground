@@ -1,0 +1,39 @@
+@import "../color.css";
+
+:root{
+    --leadingColor : white;
+}
+.Leading {
+    background-color: var(--AccentColor);
+}
+
+.Leading-description {
+    color: var(--leadingColor);
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem;
+}
+
+.Leading-downloadButton {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border-radius: 4px;
+    color: var(--leadingColor);
+    background-color: transparent;
+    border: 1px solid var(--leadingColor);
+    text-decoration: none;
+}
+
+.Leading-downloadButton:hover {
+    color: var(--AccentColor);
+    text-shadow: none;
+    background-color: #FFF;
+    border-color: #FFF;
+}
