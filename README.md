@@ -1,18 +1,16 @@
 # textlint
 
-[WIP] ONLINE DEMO SITE.
+ONLINE DEMO SITE.
+
+visit http://textlint.github.io/
 
 ## Installation
 
-- [ ] Describe the installation process
+    npm install
 
 ## Usage
 
-- [ ] Write usage instructions
-
-## Tests
-
-- [ ] Write How to Tests
+    npm run build
 
 ## Contributing
 

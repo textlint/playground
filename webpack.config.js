@@ -7,12 +7,13 @@ module.exports = {
         'build': './src/index.js'
     },
     output: {
-        path: __dirname,
+        path: __dirname + "/build",
         filename: '[name].js'
     },
     module: {
         loaders: [
             {test: /\.json$/, loader: "json"},
+            {test: /\.css$/, loader: "style-loader!css-loader"},
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
