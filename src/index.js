@@ -7,6 +7,9 @@ import defaultRuleList from "./defaultRuleList";
 import {updateRuleList} from "./actions/textlintActions"
 const {createRenderer} = dom;
 
+// dependency css
+require("codemirror/lib/codemirror.css");
+require("codemirror/addon/lint/lint.css");
 // Create a Redux store to handle all UI actions and side-effects
 const middlewares = [];
 if (process.env.NODE_ENV === `development`) {
