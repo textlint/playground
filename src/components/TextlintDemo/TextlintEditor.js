@@ -16,7 +16,8 @@ require("codemirror/mode/clike/clike.js");
 require("codemirror/mode/meta.js");
 require("codemirror/addon/edit/continuelist.js");
 require("codemirror/addon/lint/lint.js");
-
+require("codemirror/lib/codemirror.css");
+require("codemirror/addon/lint/lint.css");
 const createValidator = require("codemirror-textlint");
 const textlint = new TextLintCore();
 const onChange = (dispatch) => {

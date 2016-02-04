@@ -19,10 +19,10 @@
     "test": "test"
   },
   "scripts": {
-    "build:css": "suitcss --import-root css/ css/index.css build/build.css",
+    "build:css": "suitcss --import-root css/ css/index.css bundle/build.css",
     "build:js": "webpack -p",
     "build": "npm-run-all --parallel build:css build:js",
-    "watch:css": "suitcss --watch --import-root css/ css/index.css build/build.css",
+    "watch:css": "suitcss --watch --import-root css/ css/index.css bundle/build.css",
     "watch:js": "webpack -d --watch",
     "watch": "npm-run-all --parallel watch:css watch:js",
     "deploy": "gh-pages -b master -d ./"
