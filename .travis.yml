@@ -16,7 +16,7 @@ after_success:
   - git config --global user.email "azuciao@gmail.com"
   - git config --global user.name "Travis"
   - git clone git@github.com:textlint/textlint.github.io.git -b master ../out
-  - cp -a ./ ../out
+  - cp -a build ../out/
   - cd ../out
   - git add --all
   - git add -f build/
