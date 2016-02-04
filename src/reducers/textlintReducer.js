@@ -63,7 +63,7 @@ The pluggable linting tool for text and markdown.
 
 TODO: this is error by textlint-rule-no-todo
 
-You try to input text then textlint lint the text using loaded rules.
+Try to input text and lint the text using loaded rules.
 
 
 
