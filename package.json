@@ -39,7 +39,8 @@
     "redux-thunk": "^1.0.3",
     "textlint": "^5.2.0",
     "textlint-rule-no-todo": "^1.0.3",
-    "textlint-rule-sjsj": "^1.0.5"
+    "textlint-rule-sjsj": "^1.0.5",
+    "textlint-rule-unexpanded-acronym": "^1.2.1"
   },
   "devDependencies": {
     "babel-loader": "^6.2.1",
