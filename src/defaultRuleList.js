@@ -12,6 +12,11 @@ export default [
         name: "textlint-rule-sjsj(Simplified JavaScript Jargon)",
         rule: require("textlint-rule-sjsj"),
         enable: true
+    }, {
+        id: 3,
+        name: "textlint-rule-unexpanded-acronym",
+        rule: require("textlint-rule-unexpanded-acronym"),
+        enable: true
     }
 ];
 
