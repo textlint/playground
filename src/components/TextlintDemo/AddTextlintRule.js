@@ -19,7 +19,7 @@ const fetchModule = (dispatch, moduleName) => {
                 dispatch(addRule(moduleName, window[camelizedName]));
                 resolve(window[moduleName]);
             } else {
-                const error = new Error(`not found ${moduleName}`);
+                const error = new Error(`Not use ${moduleName}`);
                 dispatch(failureResponse(API_URL, error));
                 reject(error);
             }
