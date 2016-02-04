@@ -18,7 +18,7 @@ after_success:
   - git add -f build/
   - git remote set-url origin git@github.com:textlint/textlint.github.io.git
   - 'git commit -m "Generate Travis JOB $TRAVIS_JOB_NUMBER"'
-  - '[ "$TRAVIS_BRANCH" == "develop" ] && git push origin master'
+  - '[ "$TRAVIS_BRANCH" == "develop" ] && git push -f origin master'
 branches:
   except:
     - master
