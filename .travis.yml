@@ -19,6 +19,9 @@ after_success:
   - cd textlint.github.io
   - cp -a ../ .
   - git add --all
+  - git remote -v
+  - git remote set-url origin git@github.com:textlint/textlint.github.io.git
+  - git remote -v
   - 'git commit -m "Generate Travis JOB $TRAVIS_JOB_NUMBER"'
   - '[ "$TRAVIS_BRANCH" == "develop" ] && git push origin master'
 branches:
