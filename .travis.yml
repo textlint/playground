@@ -8,14 +8,19 @@ script:
   - npm run build
 after_success:
 # http://blog.eiel.info/blog/2014/02/18/github-push-from-travis/
-#  https://github.com/creativelive/travis-key
+# https://github.com/creativelive/travis-key
   - echo -e "Host github.com\n\tStrictHostKeyChecking no\nIdentityFile ~/.ssh/deploy.key\n" >> ~/.ssh/config
   - openssl aes-256-cbc -k "$SERVER_KEY" -in .travis/deploy_key.enc -d -a -out deploy.key
   - cp deploy.key ~/.ssh/
   - chmod 600 ~/.ssh/deploy.key
   - git config --global user.email "azuciao@gmail.com"
   - git config --global user.name "Travis"
-  - npm run deploy
+  - git clone git@github.com:textlint/textlint.github.io.git -b master
+  - cd textlint.github.io
+  - cp -a ../ .
+  - git add --all
+  - 'git commit -m "Generate Travis JOB $TRAVIS_JOB_NUMBER"'
+  - '[ "$TRAVIS_BRANCH" == "develop" ] && git push origin master'
 branches:
   except:
     - master
