@@ -52,7 +52,7 @@ const CodeMirrorEditor = {
     },
     render({path}){
         return <div class="CodeMirrorEditor">
-            <textarea id={path}></textarea>
+            <textarea class="CodeMirrorEditor-textarea" style="display:none;" id={path}></textarea>
         </div>
     }
 };
