@@ -10,6 +10,7 @@ export const TextlintDemo = {
     render({props}){
         const {enabledRules, disabledRules, ruleErrors, text} = props;
         return <div className="TextlintDemo">
+            <h2 className="TextlintDemo-title header-has-icon">Online DEMO</h2>
             <div className="TextlintDemo-Content l-flex-container l-flex-row">
                 <div className="TextlintDemo-Editor l-flex-left-half">
                     <TextlintEditor enabledRules={enabledRules} value={text}/>

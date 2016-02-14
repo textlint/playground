@@ -1,4 +1,6 @@
 @import "./color.css";
+/* Base */
+@import "./base/margin-padding.css";
 /* Layout*/
 @import "./layout/Body.css";
 @import "./layout/TextlintDemo.css";
@@ -6,6 +8,7 @@
 @import "./components/App.css";
 @import "./components/Header.css";
 @import "./components/Leading.css";
+@import "./components/WhatIsTextLint.css";
 @import "./components/Footer.css";
 @import "./components/TextlintDemo.css";
 @import "./components/TextlintRuleListItem.css";
@@ -13,5 +16,8 @@
 @import "./components/EnabledTextlintRuleList.css";
 @import "./components/DisabledTextlintRuleList.css";
 @import "./components/AddTextlintRule.css";
+/* Share */
+@import "./components/_shared_header.css";
 /* Utils */
-@import "./utils/padding.css"
+@import "./utils/padding.css";
+@import "./utils/image.css";

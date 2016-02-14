@@ -1,5 +1,5 @@
 @import "../color.css";
-@import "./var-layout.css";
+@import "./_var-layout.css";
 .Header {
     background-color: #FBFBFB;
     padding: 5px 0;
@@ -20,7 +20,6 @@
     justify-content: flex-end;
     align-items: center;
     flex-direction: row;
-    /**/
     padding-right: var(--right-end-padding);
 }
 

@@ -1,0 +1,6 @@
+.header-has-icon:before {
+    content:"";
+    background: url("../img/textlint-icon_black-white-128x128.png") no-repeat left center;
+    background-size: 0.8em;
+    padding-right: 1em;
+}

@@ -1,9 +1,13 @@
-@import "./var-layout.css";
+@import "./_var-layout.css";
 @import "../color.css";
 
 .TextlintDemo {
     background-color: var(--MainBackgroundColor);
-    border: 1px solid #ddd;
+}
+
+.TextlintDemo-title {
+    padding-left: var(--left-start-padding);
+    padding-right: var(--right-end-padding);
 }
 
 .TextlintDemo-ruleBox, .TextlintDemo-errorBox {
@@ -13,6 +17,8 @@
 .TextlintDemo-Content {
     height: 100%;
     line-height: 1.5;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
 
 .TextlintDemo-Editor {

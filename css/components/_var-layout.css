@@ -5,6 +5,6 @@
 
 */
 :root {
-    --right-end-padding: 32px;
-    --left-start-padding: 32px;
+    --right-end-padding: 1.5rem;
+    --left-start-padding: 1.5rem;
 }

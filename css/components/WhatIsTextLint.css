@@ -1,0 +1,18 @@
+@import "../color.css";
+@import "./_var-layout.css";
+
+.WhatIsTextLint {
+    background: var(--MainBackgroundColor);
+    padding-left: var(--left-start-padding);
+    padding-right: var(--right-end-padding);
+    padding-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.WhatIsTextLint-title {
+    margin: 0;
+}
+
+.WhatIsTextLint-philosophy-list {
+    padding-left: calc(var(--left-start-padding) + 1em)
+}
