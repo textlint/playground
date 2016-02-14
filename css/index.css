@@ -1,6 +1,7 @@
 @import "./color.css";
 /* Base */
 @import "./base/margin-padding.css";
+@import "./base/font.css";
 /* Layout*/
 @import "./layout/Body.css";
 @import "./layout/TextlintDemo.css";

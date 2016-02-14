@@ -61,12 +61,11 @@ const defaultText = `# Textlint
 
 The pluggable linting tool for text and markdown.
 
+Textlint is very useful.
+
 TODO: this is error by textlint-rule-no-todo
 
 Try to input text and lint the text using loaded rules.
-
-
-
 
 `;
 function textReducer(text = defaultText, action) {
