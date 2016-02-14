@@ -39,6 +39,7 @@
     "redux-thunk": "^1.0.3",
     "textlint": "^5.2.0",
     "textlint-rule-no-todo": "^1.0.3",
+    "textlint-rule-rousseau": "^1.3.2",
     "textlint-rule-sjsj": "^1.0.5",
     "textlint-rule-unexpanded-acronym": "^1.2.1"
   },

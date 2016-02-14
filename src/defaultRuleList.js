@@ -17,6 +17,11 @@ export default [
         name: "textlint-rule-unexpanded-acronym",
         rule: require("textlint-rule-unexpanded-acronym"),
         enable: true
+    }, {
+        id: 4,
+        name: "textlint-rule-rousseau",
+        rule: require("textlint-rule-rousseau"),
+        enable: true
     }
 ];
 
