@@ -5,7 +5,7 @@
     background-color: var(--MainBackgroundColor);
 }
 
-.TextlintDemo-title {
+.TextlintDemo-title, .TextlintDemo-lead {
     padding-left: var(--left-start-padding);
     padding-right: var(--right-end-padding);
 }
