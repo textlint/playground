@@ -22,6 +22,12 @@ export default [
         name: "textlint-rule-rousseau",
         rule: require("textlint-rule-rousseau"),
         enable: true
+    },
+    {
+        id: 4,
+        name: "textlint-rule-alex",
+        rule: require("textlint-rule-alex"),
+        enable: true
     }
 ];
 
