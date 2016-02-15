@@ -9,11 +9,11 @@ function mutateAfterMount(path, props) {
         var cm = CodeMirror.fromTextArea(textarea);
         updateCmState(cm, props);
         mirrorMap[path] = cm;
-        if (typeof props.defaultValue === "string") {
-            cm.setValue(props.defaultValue);
-        }
         if (typeof props["onChange"] === "function") {
             cm.on('change', props["onChange"]);
+        }
+        if (typeof props.defaultValue === "string") {
+            cm.setValue(props.defaultValue);
         }
     };
 }
