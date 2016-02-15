@@ -6,7 +6,7 @@ export const WhatIsTextLint = {
         return <div className="WhatIsTextLint">
             <h2 className="WhatIsTextLint-title header-has-icon">What is textlint?</h2>
             <p>
-                textlint is an open source text linting utility.<br />
+                textlint is an open source text linting utility written in JavaScript.<br />
                 It it hard to lint text written by natural language, but we try to resolve this issue by <b>pluggable</b> approach.
             </p>
             <h3 className="WhatIsTextLint-title">Everything is pluggable:</h3>
