@@ -2,7 +2,7 @@
 
 ONLINE DEMO SITE.
 
-visit http://textlint.github.io/
+Visit http://textlint.github.io/
 
 ## Installation
 
