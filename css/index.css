@@ -10,6 +10,7 @@
 @import "./components/Header.css";
 @import "./components/Leading.css";
 @import "./components/WhatIsTextLint.css";
+@import "./components/Fixable.css";
 @import "./components/Footer.css";
 @import "./components/TextlintDemo.css";
 @import "./components/TextlintRuleListItem.css";

@@ -1,0 +1,9 @@
+@import "./_var-layout.css";
+
+.Fixable {
+    background: var(--MainBackgroundColor);
+    padding-left: var(--left-start-padding);
+    padding-right: var(--right-end-padding);
+    padding-bottom: 1rem;
+    line-height: 1.5;
+}
