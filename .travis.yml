@@ -15,7 +15,7 @@ after_success:
   - chmod 600 ~/.ssh/deploy.key
   - git config --global user.email "azuciao@gmail.com"
   - git config --global user.name "Travis"
-  - test $TRAVIS_BRANCH == "develop" && npm run deploy
+  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "develop" && npm run deploy
 branches:
   except:
     - master
