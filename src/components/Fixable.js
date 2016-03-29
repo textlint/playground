@@ -10,9 +10,8 @@ export const Fixable = {
 
             </p>
             <p>
-                Please see <a href="https://github.com/textlint/textlint/blob/master/docs/rule-fixer.md"
-                              title="Creating fixable rule">
-                document about fixer</a> for detail.
+                Please see <a href="https://github.com/textlint/textlint#fixable"
+                              title="What is fixer?">document about fixer</a> for details.
             </p>
         </div>;
     }
