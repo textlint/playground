@@ -11,8 +11,8 @@ export const WhatIsTextLint = {
             </p>
             <h3 className="WhatIsTextLint-title">Everything is pluggable:</h3>
             <ul className="WhatIsTextLint-philosophy-list">
-                <li>No bundle rules.</li>
-                <li>To use a rule, run simply <code>npm install textlint-rule-xxx</code>. See a <a
+                <li>No bundled rules.</li>
+                <li>To use a rule, simply run <code>npm install textlint-rule-xxx</code>. See the <a
                     href="https://github.com/textlint/textlint/wiki/Collection-of-textlint-rule"
                     title="Collection of textlint rule · textlint/textlint Wiki">collection of textlint rules</a>
                 </li>
@@ -24,7 +24,7 @@ export const WhatIsTextLint = {
                                      title="textlint/textlint-plugin-html: html support for textlint">HTML</a> and other
                     formats are supported by custom plugins
                 </li>
-                <li>Formatter(reporter) is used both by bundled and custom formatters</li>
+                <li>Formatter (reporter) is used both by bundled and custom formatters</li>
             </ul>
         </div>
     }
