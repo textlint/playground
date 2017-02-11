@@ -7,7 +7,7 @@ const menuItems = [
         "url": "https://github.com/azu/textlint/wiki/Collection-of-textlint-rule"
     },
     {
-        "title": "Document",
+        "title": "Documentation",
         "url": "https://github.com/textlint/textlint/tree/master/docs"
     },
     {
