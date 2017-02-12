@@ -5,6 +5,7 @@ import debounce from "lodash.debounce"
 import CodeMirrorEditor from "./CodeMirrorEditor"
 import {updateRuleErrors, updateText} from "../../actions/textlintActions"
 import {TextLintCore} from "textlint"
+import textlintToCodeMirror from "textlint-message-to-codemirror";
 require("codemirror/addon/mode/overlay.js");
 require("codemirror/mode/xml/xml.js");
 require("codemirror/mode/markdown/markdown.js");
@@ -16,9 +17,23 @@ require("codemirror/mode/clike/clike.js");
 require("codemirror/mode/meta.js");
 require("codemirror/addon/edit/continuelist.js");
 require("codemirror/addon/lint/lint.js");
-
-const createValidator = require("codemirror-textlint");
 const textlint = new TextLintCore();
+const createValidator = ({rules, rulesOption}) => {
+    textlint.setupRules(rules, rulesOption);
+    return (text, callback) => {
+        if (!text) {
+            callback([]);
+            return;
+        }
+        textlint.lintText(text, ".md").then(result => {
+            const lintMessages = result.messages;
+            const lintErrors = lintMessages.map(textlintToCodeMirror);
+            callback(lintErrors);
+        }).catch(error => {
+            console.error(error);
+        });
+    };
+};
 const onChange = (dispatch) => {
     return (text) => {
         const value = text;
@@ -43,7 +58,7 @@ export default {
             rules,
             rulesOption
         });
-        textlint.setupRules(rules, rulesOption);
+
         const options = {
             lineNumbers: true,
             lineWrapping: true,
@@ -56,7 +71,7 @@ export default {
         };
         const onChangeHandler = debounce(onChange(dispatch), 1000);
         return <div class="TextlintEditor">
-            <CodeMirrorEditor defaultValue={props.value} options={options} onChange={(cm)=> {
+            <CodeMirrorEditor defaultValue={props.value} options={options} onChange={(cm) => {
                 return onChangeHandler(cm.getValue());
             }}/>
         </div>

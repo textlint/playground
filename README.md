@@ -2,15 +2,20 @@
 
 ONLINE DEMO SITE.
 
-Visit http://textlint.github.io/
+Visit [https://textlint.github.io/](https://textlint.github.io/)
 
 ## Installation
 
-    npm install
+    yarn
+    # npm install
 
 ## Usage
 
-    npm run build
+    yarn run watch
+    # or
+    yarn run build
+    # and
+    open index.html
 
 ## Contributing
 

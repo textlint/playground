@@ -1,3 +1,5 @@
+const path = require("path");
+const webpack = require("webpack");
 module.exports = {
     node: {
         fs: "empty",
@@ -12,19 +14,18 @@ module.exports = {
     },
     module: {
         loaders: [
-            {test: /\.json$/, loader: "json"},
+            {test: /\.json$/, loader: "json-loader"},
             {test: /\.css$/, loader: "style-loader!css-loader"},
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: "babel",
-                query: {
-                    "presets": ["es2015"],
-                    "plugins": [
-                        ["transform-react-jsx", {"pragma": "element"}]
-                    ]
-                }
+                loader: "babel-loader"
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.DefinePlugin({
+            "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)
+        })
+    ]
 };
