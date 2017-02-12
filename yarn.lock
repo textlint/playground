@@ -924,6 +924,16 @@ builtin-status-codes@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
 
+caller-path@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/caller-path/-/caller-path-0.1.0.tgz#94085ef63581ecd3daa92444a8fe94e82577751f"
+  dependencies:
+    callsites "^0.2.0"
+
+callsites@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/callsites/-/callsites-0.2.0.tgz#afab96262910a7f33c19a5775825c69f34e350ca"
+
 camelcase-css@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/camelcase-css/-/camelcase-css-1.0.1.tgz#157c4238265f5cf94a1dffde86446552cbf3f705"
@@ -3643,7 +3653,7 @@ path-browserify@0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/path-browserify/-/path-browserify-0.0.0.tgz#a0b870729aae214005b7d5032ec2cbbb0fb4451a"
 
-path-exists@^2.0.0:
+path-exists@^2.0.0, path-exists@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/path-exists/-/path-exists-2.1.0.tgz#0feb6c64f0fc518d9a754dd5efb62c7022761f4b"
   dependencies:
@@ -4239,6 +4249,18 @@ randombytes@^2.0.0, randombytes@^2.0.1:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/randombytes/-/randombytes-2.0.3.tgz#674c99760901c3c4112771a31e521dc349cc09ec"
 
+rc-config-loader@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/rc-config-loader/-/rc-config-loader-1.0.2.tgz#c5e903ab36c22204f3cca9d9ddfd7e68fe3758eb"
+  dependencies:
+    debug "^2.2.0"
+    js-yaml "^3.6.1"
+    json5 "^0.5.0"
+    object-assign "^4.1.0"
+    object-keys "^1.0.9"
+    path-exists "^2.1.0"
+    require-uncached "^1.0.3"
+
 rc-loader@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/rc-loader/-/rc-loader-1.0.0.tgz#966dd27f7f54b7693bea472415017d2afc642679"
@@ -4583,12 +4605,23 @@ require-main-filename@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/require-main-filename/-/require-main-filename-1.0.1.tgz#97f717b69d48784f5f526a6c5aa8ffdda055a4d1"
 
+require-uncached@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/require-uncached/-/require-uncached-1.0.3.tgz#4e0d56d6c9662fd31e43011c4b95aa49955421d3"
+  dependencies:
+    caller-path "^0.1.0"
+    resolve-from "^1.0.0"
+
 resolve-dir@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/resolve-dir/-/resolve-dir-0.1.1.tgz#b219259a5602fac5c5c496ad894a6e8cc430261e"
   dependencies:
     expand-tilde "^1.2.2"
     global-modules "^0.2.3"
+
+resolve-from@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/resolve-from/-/resolve-from-1.0.1.tgz#26cbfe935d1aeeeabb29bc3fe5aeb01e93d44226"
 
 resolve-from@^2.0.0:
   version "2.0.0"
@@ -5405,39 +5438,6 @@ textlint-util-to-string@^1.2.1:
     object-assign "^4.0.1"
     structured-source "^3.0.2"
 
-textlint@7.2.1-alpha.b8e5c85d:
-  version "7.2.1-alpha.b8e5c85d"
-  resolved "https://registry.yarnpkg.com/textlint/-/textlint-7.2.1-alpha.b8e5c85d.tgz#eb5085d85720d01a28d7018c7f59dba0c1e76131"
-  dependencies:
-    bluebird "^3.0.5"
-    carrack "0.0.5"
-    chalk "^1.1.1"
-    cosmiconfig "^2.1.1"
-    debug "^2.1.0"
-    deep-equal "^1.0.1"
-    diff "^2.2.2"
-    file-entry-cache "^2.0.0"
-    get-stdin "^5.0.1"
-    interop-require "^1.0.0"
-    is-file "^1.0.0"
-    log-symbols "^1.0.2"
-    map-like "^1.0.1"
-    md5 "^2.2.1"
-    mkdirp "^0.5.0"
-    object-assign "^4.0.1"
-    optionator "^0.8.0"
-    read-pkg "^1.1.0"
-    string-width "^1.0.1"
-    structured-source "^3.0.2"
-    text-table "^0.2.0"
-    textlint-formatter "^1.7.3"
-    textlint-plugin-markdown "^1.1.0"
-    textlint-plugin-text "^1.0.1"
-    traverse "^0.6.6"
-    try-resolve "^1.0.1"
-    txt-ast-traverse "^1.2.0"
-    unique-concat "^0.2.2"
-
 textlint@^6.8.0:
   version "6.11.1"
   resolved "https://registry.yarnpkg.com/textlint/-/textlint-6.11.1.tgz#35cca26c4088ec1d4dfaee06f4dc293ea8576590"
@@ -5460,6 +5460,39 @@ textlint@^6.8.0:
     text-table "^0.2.0"
     textlint-formatter "^1.7.3"
     textlint-plugin-markdown "^1.0.3"
+    textlint-plugin-text "^1.0.1"
+    traverse "^0.6.6"
+    try-resolve "^1.0.1"
+    txt-ast-traverse "^1.2.0"
+    unique-concat "^0.2.2"
+
+textlint@^7.2.2:
+  version "7.2.2"
+  resolved "https://registry.yarnpkg.com/textlint/-/textlint-7.2.2.tgz#3e725f903e60c0beedb8085fef8d109316811f7a"
+  dependencies:
+    bluebird "^3.0.5"
+    carrack "0.0.5"
+    chalk "^1.1.1"
+    debug "^2.1.0"
+    deep-equal "^1.0.1"
+    diff "^2.2.2"
+    file-entry-cache "^2.0.0"
+    get-stdin "^5.0.1"
+    interop-require "^1.0.0"
+    is-file "^1.0.0"
+    log-symbols "^1.0.2"
+    map-like "^1.0.1"
+    md5 "^2.2.1"
+    mkdirp "^0.5.0"
+    object-assign "^4.0.1"
+    optionator "^0.8.0"
+    rc-config-loader "^1.0.2"
+    read-pkg "^1.1.0"
+    string-width "^1.0.1"
+    structured-source "^3.0.2"
+    text-table "^0.2.0"
+    textlint-formatter "^1.7.3"
+    textlint-plugin-markdown "^1.1.0"
     textlint-plugin-text "^1.0.1"
     traverse "^0.6.6"
     try-resolve "^1.0.1"
