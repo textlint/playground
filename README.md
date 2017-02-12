@@ -1,4 +1,4 @@
-# textlint
+# textlint [![Build Status](https://travis-ci.org/textlint/textlint.github.io.svg?branch=master)](https://travis-ci.org/textlint/textlint.github.io)
 
 ONLINE DEMO SITE.
 
