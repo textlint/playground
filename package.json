@@ -26,7 +26,7 @@
     "watch:css": "suitcss --watch --import-root css/ css/index.css public/build/build.css",
     "watch:js": "webpack -d --watch",
     "watch": "npm-run-all --parallel watch:*",
-    "deploy": "gh-pages -b master -d ./ --repo git@github.com:textlint/textlint.github.io.git",
+    "deploy": "gh-pages -b master -d ./public --repo git@github.com:textlint/textlint.github.io.git",
     "server": "cross-env NODE_ENV=development webpack-dev-server --hot --content-base ./public --open",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
     "precommit": "lint-staged",
