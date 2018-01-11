@@ -51,9 +51,10 @@
     "textlint-rule-unexpanded-acronym": "^1.2.1"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
-    "babel-plugin-transform-react-jsx": "^6.3.13",
-    "babel-preset-es2015": "^6.3.13",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
     "cross-env": "^5.1.3",
     "css-loader": "0.28.8",
     "gh-pages": "1.1.0",
