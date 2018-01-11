@@ -1,8 +1,8 @@
 // LICENSE : MIT
 "use strict";
-import {TOGGLE_RULE, UPDATE_RULE_LIST, ADD_RULE} from "../actions/textlintActions";
-import {UPDATE_RULE_ERRORS} from "../actions/textlintActions";
-import {UPDATE_TEXT} from "../actions/textlintActions";
+import { TOGGLE_RULE, UPDATE_RULE_LIST, ADD_RULE } from "../actions/textlintActions";
+import { UPDATE_RULE_ERRORS } from "../actions/textlintActions";
+import { UPDATE_TEXT } from "../actions/textlintActions";
 
 const _______ruleObject = {
     id: 0,

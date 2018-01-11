@@ -1,5 +1,6 @@
 @import "../color.css";
 
-html, body {
+html,
+body {
     background-color: var(--BackgroundColor);
 }

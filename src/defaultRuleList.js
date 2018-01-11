@@ -12,12 +12,14 @@ export default [
         name: "textlint-rule-sjsj(Simplified JavaScript Jargon)",
         rule: require("textlint-rule-sjsj"),
         enable: true
-    }, {
+    },
+    {
         id: 3,
         name: "textlint-rule-unexpanded-acronym",
         rule: require("textlint-rule-unexpanded-acronym"),
         enable: true
-    }, {
+    },
+    {
         id: 4,
         name: "textlint-rule-rousseau",
         rule: require("textlint-rule-rousseau"),
@@ -30,5 +32,3 @@ export default [
         enable: true
     }
 ];
-
-
