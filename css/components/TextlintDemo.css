@@ -1,16 +1,23 @@
 @import "./_var-layout.css";
 @import "../color.css";
 
-.TextlintDemo {
-    background-color: var(--MainBackgroundColor);
+:root {
+    --TextlintDemo-height: 100%;
 }
 
-.TextlintDemo-title, .TextlintDemo-lead {
+.TextlintDemo {
+    background-color: var(--MainBackgroundColor);
+    height: 100%;
+}
+
+.TextlintDemo-title,
+.TextlintDemo-lead {
     padding-left: var(--left-start-padding);
     padding-right: var(--right-end-padding);
 }
 
-.TextlintDemo-ruleBox, .TextlintDemo-errorBox {
+.TextlintDemo-ruleBox,
+.TextlintDemo-errorBox {
     padding-bottom: 1rem;
 }
 
@@ -22,37 +29,41 @@
 }
 
 .TextlintDemo-Editor {
-    border-right: 1px solid #ddd
+    border-right: 1px solid #ddd;
 }
 
 .TextlintDemo-Setting {
-    border-left: 1px solid #ddd
+    border-left: 1px solid #ddd;
 }
 
-.TextlintDemo-Editor, .TextlintEditor .TextlintDemo-Setting, .TextlintErrorList {
+.TextlintDemo-Editor,
+.TextlintEditor .TextlintDemo-Setting,
+.TextlintErrorList {
     width: 100%;
 }
 
-/*TextlintDemo-Editor | TextlintDemo-Setting*/
-.TextlintDemo-Editor, .TextlintEditor, .TextlintDemo-Setting {
-    height: 100%;
+.TextlintDemo-errorBox,
+.TextlintDemo-ruleBox {
+    overflow: scroll;
 }
 
-.TextlintDemo-Editor h3, .TextlintDemo-Setting h3 {
-    /* 縦位置をめにゅーと揃える */
-    padding: 0;
+/*TextlintDemo-Editor | TextlintDemo-Setting*/
+.TextlintEditor,
+.TextlintDemo-Setting {
+    height: var(--TextlintDemo-height);
+}
+
+.TextlintDemo-Editor h3,
+.TextlintDemo-Setting h3 {
     margin: 0;
-    padding-right: var(--right-end-padding);
+    padding: 0 var(--right-end-padding) 0 0;
     text-align: right;
     background-color: #f4f4f4;
     color: var(--TextColor);
 }
 
-.CodeMirrorEditor {
-    height: 100%;
-}
-
-.CodeMirror {
-    height: auto;
+.CodeMirrorEditor,
+.CodeMirrorEditor .CodeMirror {
+    height: var(--TextlintDemo-height);
     font-size: 14px;
 }

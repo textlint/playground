@@ -1,11 +1,12 @@
-import {dom, element} from 'decca'
-import {applyMiddleware, createStore} from 'redux';
-import createLogger from 'redux-logger';
-import textlintApp from './reducers/textlintReducer';
-import App from "./components/App"
+import { dom, element } from "decca";
+import { applyMiddleware, createStore } from "redux";
+import { createLogger } from "redux-logger";
+import textlintApp from "./reducers/textlintReducer";
+import App from "./components/App";
 import defaultRuleList from "./defaultRuleList";
-import {updateRuleList} from "./actions/textlintActions"
-const {createRenderer} = dom;
+import { updateRuleList } from "./actions/textlintActions";
+
+const { createRenderer } = dom;
 
 // dependency css
 require("codemirror/lib/codemirror.css");
@@ -24,11 +25,8 @@ const store = createStoreWithMiddleware(textlintApp);
 const render = createRenderer(document.body, store.dispatch);
 
 // Update the page and add redux state to the context
-store.subscribe(()=> {
-    render(
-        <App />,
-        store.getState()
-    );
+store.subscribe(() => {
+    render(<App />, store.getState());
 });
 // Update with initial data
 store.dispatch(updateRuleList(defaultRuleList));
