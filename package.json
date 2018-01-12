@@ -20,10 +20,10 @@
   },
   "scripts": {
     "start": "npm-run-all clean --parallel watch:css server",
-    "build:css": "suitcss --import-root css/ css/index.css bundle/build.css",
+    "build:css": "suitcss --no-lint --import-root css/ css/index.css bundle/build.css",
     "build:js": "webpack -p",
     "build": "npm-run-all --parallel build:*",
-    "watch:css": "suitcss --watch --import-root css/ css/index.css public/build/build.css",
+    "watch:css": "suitcss --no-lint --watch --import-root css/ css/index.css public/build/build.css",
     "watch:js": "webpack -d --watch",
     "watch": "npm-run-all --parallel watch:*",
     "deploy": "gh-pages -b master -d ./public --repo git@github.com:textlint/textlint.github.io.git",
