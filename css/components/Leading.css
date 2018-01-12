@@ -1,7 +1,7 @@
 @import "../color.css";
 
-:root{
-    --leadingColor : white;
+:root {
+    --leadingColor: white;
 }
 .Leading {
     background-color: var(--AccentColor);
@@ -34,6 +34,6 @@
 .Leading-downloadButton:hover {
     color: var(--AccentColor);
     text-shadow: none;
-    background-color: #FFF;
-    border-color: #FFF;
+    background-color: #fff;
+    border-color: #fff;
 }

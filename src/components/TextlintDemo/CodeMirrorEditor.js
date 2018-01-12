@@ -1,7 +1,7 @@
 // LICENSE : MIT
 "use strict";
-import {dom, element} from 'decca'
-import CodeMirror from "codemirror"
+import { dom, element } from "decca";
+import CodeMirror from "codemirror";
 const mirrorMap = {};
 function mutateAfterMount(path, props) {
     return () => {
@@ -10,7 +10,7 @@ function mutateAfterMount(path, props) {
         updateCmState(cm, props);
         mirrorMap[path] = cm;
         if (typeof props["onChange"] === "function") {
-            cm.on('change', props["onChange"]);
+            cm.on("change", props["onChange"]);
         }
         if (typeof props.defaultValue === "string") {
             cm.setValue(props.defaultValue);
@@ -25,7 +25,7 @@ function updateCmState(cm, nextProps) {
         }
     }
     // options
-    if (typeof nextProps.options === 'object') {
+    if (typeof nextProps.options === "object") {
         Object.keys(nextProps.options).forEach(optionName => {
             if (nextProps.options.hasOwnProperty(optionName)) {
                 cm.setOption(optionName, nextProps.options[optionName]);
@@ -34,26 +34,28 @@ function updateCmState(cm, nextProps) {
     }
 }
 const CodeMirrorEditor = {
-    onCreate({path, props}){
+    onCreate({ path, props }) {
         requestAnimationFrame(mutateAfterMount(path, props));
     },
-    onUpdate({props, path}){
+    onUpdate({ props, path }) {
         const cm = mirrorMap[path];
         if (cm) {
             updateCmState(cm, props);
         }
     },
-    onRemove({path}){
+    onRemove({ path }) {
         const cm = mirrorMap[path];
         if (cm) {
             cm.toTextArea();
             mirrorMap[path] = null;
         }
     },
-    render({path}){
-        return <div class="CodeMirrorEditor">
-            <textarea class="CodeMirrorEditor-textarea" style="display:none;" id={path}></textarea>
-        </div>
+    render({ path }) {
+        return (
+            <div class="CodeMirrorEditor">
+                <textarea class="CodeMirrorEditor-textarea" style="display:none;" id={path} />
+            </div>
+        );
     }
 };
 

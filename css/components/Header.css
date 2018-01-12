@@ -1,7 +1,7 @@
 @import "../color.css";
 @import "./_var-layout.css";
 .Header {
-    background-color: #FBFBFB;
+    background-color: #fbfbfb;
     padding: 5px 0;
     display: flex;
 }
@@ -23,7 +23,8 @@
     padding-right: var(--right-end-padding);
 }
 
-.HeaderMenus, .HeaderMenuItem {
+.HeaderMenus,
+.HeaderMenuItem {
     display: inline-block;
 }
 

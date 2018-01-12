@@ -6,16 +6,16 @@ module.exports = {
         module: "empty"
     },
     entry: {
-        'build': './src/index.js'
+        build: "./src/index.js"
     },
     output: {
-        path: __dirname + "/bundle",
-        filename: '[name].js'
+        path: path.join(__dirname, "public", "build"),
+        publicPath: "/build/",
+        filename: "bundle.js"
     },
     module: {
         loaders: [
-            {test: /\.json$/, loader: "json-loader"},
-            {test: /\.css$/, loader: "style-loader!css-loader"},
+            { test: /\.css$/, loader: "style-loader!css-loader" },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,

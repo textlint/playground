@@ -12,46 +12,46 @@ export function updateText(text) {
     return {
         type: UPDATE_TEXT,
         text
-    }
+    };
 }
 export function updateRuleErrors(errors) {
     return {
         type: UPDATE_RULE_ERRORS,
         errors
-    }
+    };
 }
 export function updateRuleList(rules) {
     return {
         type: UPDATE_RULE_LIST,
         rules
-    }
+    };
 }
 export function toggleRule(id) {
     return {
         type: TOGGLE_RULE,
         id
-    }
+    };
 }
 export function addRule(ruleName, rule) {
     return {
         type: ADD_RULE,
         ruleName,
         rule
-    }
+    };
 }
 
 export function startRequest(url) {
     return {
         type: START_REQUEST,
         url
-    }
+    };
 }
 
 export function successResponse(url) {
     return {
         type: SUCCESS_RESPONSE,
         url
-    }
+    };
 }
 
 export function failureResponse(url, error) {
@@ -59,5 +59,5 @@ export function failureResponse(url, error) {
         type: FAILURE_RESPONSE,
         url,
         error
-    }
+    };
 }

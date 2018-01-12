@@ -14,5 +14,5 @@
 }
 
 .WhatIsTextLint-philosophy-list {
-    padding-left: calc(var(--left-start-padding) + 1em)
+    padding-left: calc(var(--left-start-padding) + 1em);
 }

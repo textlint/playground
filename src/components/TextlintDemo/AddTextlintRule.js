@@ -1,8 +1,8 @@
 // LICENSE : MIT
 "use strict";
-import {element} from 'decca'
-import {addRule, startRequest, failureResponse, successResponse} from "../../actions/textlintActions";
-import camelCase from 'camelcase';
+import { element } from "decca";
+import { addRule, startRequest, failureResponse, successResponse } from "../../actions/textlintActions";
+import camelCase from "camelcase";
 // Dispatch an action when the button is clicked
 const fetchModule = (dispatch, moduleName) => {
     return new Promise((resolve, reject) => {
@@ -24,7 +24,7 @@ const fetchModule = (dispatch, moduleName) => {
                 reject(error);
             }
         };
-        script.onerror = (error) => {
+        script.onerror = error => {
             dispatch(failureResponse(API_URL, error));
             reject(error);
         };
@@ -37,24 +37,31 @@ const onSubmit = (dispatch, path) => {
     if (!/^textlint-rule/.test(moduleName)) {
         return;
     }
-    fetchModule(dispatch, moduleName).then(()=> {
-        input.value = "";
-    }).catch((error) => {
-        alert(error.message);
-    });
+    fetchModule(dispatch, moduleName)
+        .then(() => {
+            input.value = "";
+        })
+        .catch(error => {
+            alert(error.message);
+        });
 };
 export default {
-    render({props, path, dispatch}){
-        return <div class="AddTextlintRule">
-            <form onSubmit={(event) => {
-                event.preventDefault();
-                onSubmit(dispatch, path);
-            }}>
-                <label>Add <a href="https://github.com/azu/textlint/wiki/Collection-of-textlint-rule">textlint rule</a>: </label>
-                <input type="text" id={path} placeholder="textlint-rule-no-todo"></input>
-                <input type="submit" value="Add Rule"></input>
-            </form>
-
-        </div>
+    render({ props, path, dispatch }) {
+        return (
+            <div class="AddTextlintRule">
+                <form
+                    onSubmit={event => {
+                        event.preventDefault();
+                        onSubmit(dispatch, path);
+                    }}
+                >
+                    <label>
+                        Add <a href="https://github.com/azu/textlint/wiki/Collection-of-textlint-rule">textlint rule</a>:{" "}
+                    </label>
+                    <input type="text" id={path} placeholder="textlint-rule-no-todo" />
+                    <input type="submit" value="Add Rule" />
+                </form>
+            </div>
+        );
     }
-}
+};
