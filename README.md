@@ -1,21 +1,24 @@
-# textlint [![Build Status](https://travis-ci.org/textlint/textlint.github.io.svg?branch=master)](https://travis-ci.org/textlint/textlint.github.io)
+# playground
 
-ONLINE DEMO SITE.
+textlint online playground.
 
-Visit [https://textlint.github.io/](https://textlint.github.io/)
+Visit [https://textlint.github.io/playground](https://textlint.github.io/playground)
+
+## Limitation
+
+Currently, only use built-in rule in the playground.
+
+## Embed mode
+
+    <iframe src="https://textlint.github.io/playground?embed" />
 
 ## Installation
 
     yarn
-    # npm install
 
 ## Usage
 
-    yarn run watch
-    # or
-    yarn run build
-    # and
-    open index.html
+    yarn start
 
 ## Contributing
 

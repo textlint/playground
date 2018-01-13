@@ -44,7 +44,7 @@
 
 .TextlintDemo-errorBox,
 .TextlintDemo-ruleBox {
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 /*TextlintDemo-Editor | TextlintDemo-Setting*/
@@ -58,8 +58,8 @@
     margin: 0;
     padding: 0 var(--right-end-padding) 0 0;
     text-align: right;
-    background-color: #f4f4f4;
-    color: var(--TextColor);
+    background: #2f2f2f;
+    color: #fff;
 }
 
 .CodeMirrorEditor,

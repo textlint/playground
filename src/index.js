@@ -4,7 +4,7 @@ import { createLogger } from "redux-logger";
 import textlintApp from "./reducers/textlintReducer";
 import App from "./components/App";
 import defaultRuleList from "./defaultRuleList";
-import { updateRuleList } from "./actions/textlintActions";
+import { updateRuleList, enableEmbedMode } from "./actions/textlintActions";
 
 const { createRenderer } = dom;
 
@@ -13,14 +13,13 @@ require("codemirror/lib/codemirror.css");
 require("codemirror/addon/lint/lint.css");
 // Create a Redux store to handle all UI actions and side-effects
 const middlewares = [];
-if (process.env.NODE_ENV === `development`) {
+if (process.env.NODE_ENV === "development") {
     const logger = createLogger();
     middlewares.push(logger);
 }
 
 const createStoreWithMiddleware = applyMiddleware(...middlewares)(createStore);
 const store = createStoreWithMiddleware(textlintApp);
-
 // Create a renderer that can turn vnodes into real DOM elements
 const render = createRenderer(document.body, store.dispatch);
 
@@ -28,5 +27,9 @@ const render = createRenderer(document.body, store.dispatch);
 store.subscribe(() => {
     render(<App />, store.getState());
 });
+// `?embed`
+if (location.search.indexOf("embed") !== -1) {
+    store.dispatch(enableEmbedMode());
+}
 // Update with initial data
 store.dispatch(updateRuleList(defaultRuleList));

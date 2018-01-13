@@ -23,7 +23,7 @@ export default {
                 return <a href={"https://www.npmjs.com/package/" + ruleId}>{ruleId}</a>;
             };
             return (
-                <li key={`${error.id}${error.line}${error.column}`}>
+                <li class="TextlintErrorList-listItem" key={`${error.id}${error.line}${error.column}`}>
                     <p>
                         {error.line}:{error.column} {showMessage(error.message)} ({npmLink(error.ruleId)})
                     </p>
@@ -32,7 +32,7 @@ export default {
         });
         return (
             <div class="TextlintErrorList">
-                <ul>{errorList}</ul>
+                <ul class="TextlintErrorList-list">{errorList}</ul>
             </div>
         );
     }

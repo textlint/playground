@@ -1,6 +1,6 @@
 // LICENSE : MIT
 "use strict";
-import { TOGGLE_RULE, UPDATE_RULE_LIST, ADD_RULE } from "../actions/textlintActions";
+import { TOGGLE_RULE, UPDATE_RULE_LIST, ADD_RULE, EMBED_MODE } from "../actions/textlintActions";
 import { UPDATE_RULE_ERRORS } from "../actions/textlintActions";
 import { UPDATE_TEXT } from "../actions/textlintActions";
 
@@ -20,6 +20,7 @@ function toggleRule(rule, action) {
         enable: !rule.enable
     });
 }
+
 function addRule(ruleList, ruleName, rule) {
     var rules = ruleList.slice();
     var ruleObject = {
@@ -32,6 +33,7 @@ function addRule(ruleList, ruleName, rule) {
     rules.push(ruleObject);
     return rules;
 }
+
 /*
     list: []
  */
@@ -61,13 +63,14 @@ const defaultText = `# Textlint
 
 The pluggable linting tool for text and markdown.
 
-Textlint is very useful.
+\`textlint\` is very usefull!
 
 TODO: this is error by textlint-rule-no-todo
 
 Try to input text and lint the text using loaded rules.
 
 `;
+
 function textReducer(text = defaultText, action) {
     switch (action.type) {
         case UPDATE_TEXT:
@@ -76,10 +79,27 @@ function textReducer(text = defaultText, action) {
             return text;
     }
 }
+
+const defaultMode = {
+    embed: false
+};
+
+function modeReducer(mode = defaultMode, action) {
+    switch (action.type) {
+        case EMBED_MODE:
+            return {
+                embed: true
+            };
+        default:
+            return mode;
+    }
+}
+
 export default function textlintApp(state = {}, action) {
     return {
         text: textReducer(state.text, action),
         rules: ruleListReducer(state.rules, action),
-        ruleErrors: ruleErrorReducer(state.ruleErrors, action)
+        ruleErrors: ruleErrorReducer(state.ruleErrors, action),
+        mode: modeReducer(state.mode, action)
     };
 }

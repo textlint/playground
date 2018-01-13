@@ -6,10 +6,12 @@
 @import "./layout/Body.css";
 @import "./layout/TextlintDemo.css";
 /* Components */
+@import "./components/body.is-embed.css";
 @import "./components/App.css";
 @import "./components/Header.css";
 @import "./components/Leading.css";
 @import "./components/WhatIsTextLint.css";
+@import "./components/TextlintErrorList.css";
 @import "./components/Fixable.css";
 @import "./components/Footer.css";
 @import "./components/TextlintDemo.css";

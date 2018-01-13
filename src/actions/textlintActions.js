@@ -8,6 +8,7 @@ export const START_REQUEST = "START_REQUEST";
 export const SUCCESS_RESPONSE = "SUCCESS_RESPONSE";
 export const FAILURE_RESPONSE = "FAILURE_RESPONSE";
 export const UPDATE_TEXT = "UPDATE_TEXT";
+export const EMBED_MODE = "EMBED_MODE";
 export function updateText(text) {
     return {
         type: UPDATE_TEXT,
@@ -59,5 +60,10 @@ export function failureResponse(url, error) {
         type: FAILURE_RESPONSE,
         url,
         error
+    };
+}
+export function enableEmbedMode() {
+    return {
+        type: EMBED_MODE
     };
 }

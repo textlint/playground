@@ -1,16 +1,16 @@
 {
-  "name": "textlint.github.io",
+  "name": "playground",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/textlint/textlint.github.io.git"
+    "url": "https://github.com/textlint/playground.git"
   },
   "author": "azu",
   "email": "azuciao@gmail.com",
-  "homepage": "https://github.com/textlint/textlint.github.io",
+  "homepage": "https://github.com/textlint/playground",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/textlint/textlint.github.io/issues"
+    "url": "https://github.com/textlint/playground/issues"
   },
   "version": "1.0.0",
   "description": "textlint homepage.",
@@ -26,8 +26,8 @@
     "watch:css": "suitcss --no-lint --watch --import-root css/ css/index.css public/build/build.css",
     "watch:js": "webpack -d --watch",
     "watch": "npm-run-all --parallel watch:*",
-    "deploy": "gh-pages -b master -d ./public --repo git@github.com:textlint/textlint.github.io.git",
-    "server": "cross-env NODE_ENV=development webpack-dev-server --hot --content-base ./public --open",
+    "deploy": "gh-pages -b master -d ./public --repo git@github.com:textlint/playground.git",
+    "server": "cross-env NODE_ENV=development webpack-dev-server --hot --content-base ./public",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
     "precommit": "lint-staged",
     "postcommit": "git reset",
@@ -45,10 +45,10 @@
     "textlint-message-to-codemirror": "^1.0.0",
     "textlint-plugin-markdown": "^4.0.4",
     "textlint-rule-alex": "^1.0.1",
+    "textlint-rule-common-misspellings": "^1.0.1",
     "textlint-rule-no-todo": "^2.0.0",
-    "textlint-rule-rousseau": "^1.3.2",
-    "textlint-rule-sjsj": "^1.0.5",
-    "textlint-rule-unexpanded-acronym": "^1.2.1"
+    "textlint-rule-unexpanded-acronym": "^1.2.1",
+    "textlint-rule-write-good": "^1.6.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
