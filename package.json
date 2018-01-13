@@ -51,6 +51,7 @@
     "textlint-rule-write-good": "^1.6.2"
   },
   "devDependencies": {
+    "@alrra/travis-scripts": "^3.0.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-react-jsx": "^6.24.1",
