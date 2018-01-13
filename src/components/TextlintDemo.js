@@ -15,7 +15,7 @@ export const TextlintDemo = {
                     <a name="demo">Online Playground</a>
                 </h2>
                 <p className="TextlintDemo-lead">
-                    Take textlint for a spin, start typing below. Want to use more? Go to{" "}
+                    Start typing below. Want to know more? Go to{" "}
                     <a href="https://github.com/textlint/textlint" title="textlint/textlint">
                         GitHub
                     </a>
