@@ -20,7 +20,7 @@ export const Logo = {
     render(props) {
         return (
             <a className="Logo" title="textlint" href="/">
-                <img class="Logo-img" alt="textlint" src="img/textlint-icon_256x256.png" />
+                <img class="Logo-img" alt="" src="img/textlint-icon_256x256.png" />
                 <span class="Logo-text">{props.children}</span>
             </a>
         );
