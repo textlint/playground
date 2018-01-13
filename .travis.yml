@@ -4,7 +4,7 @@ node_js: node
 script:
   - yarn start &
   - yarn run wait-start
-  - npm test
+  - yarn run test:ci
 after_success:
   - |
 

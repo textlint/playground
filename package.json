@@ -35,6 +35,7 @@
     "clean": "rimraf public/build/",
     "pretest": "yarn run wait-start",
     "test": "cypress run",
+    "test:ci": "cypress run --record --key 5642c412-f7af-403e-baef-25d4bfab5273",
     "cypress:open": "cypress open"
   },
   "dependencies": {
