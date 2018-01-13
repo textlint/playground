@@ -17,9 +17,16 @@ describe("The Home Page", function() {
             assert.ok(e.length > DefaultErrorList);
         });
 
+        // {selectall}{backspace} workaround for CodeMirror
         cy
             .get(".CodeMirror textarea")
             .type("{meta}A", {
+                force: true
+            })
+            .type("{backspace}", {
+                force: true
+            })
+            .type("{ctrl}A", {
                 force: true
             })
             .type("{backspace}", {
