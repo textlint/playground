@@ -12,7 +12,7 @@ export const TextlintDemo = {
         return (
             <div className="TextlintDemo">
                 <h2 className="TextlintDemo-title header-has-icon">
-                    <a name="demo">Online DEMO</a>
+                    <a name="demo">Online Playground</a>
                 </h2>
                 <p className="TextlintDemo-lead">
                     Take textlint for a spin, start typing below. Want to use more? Go to{" "}

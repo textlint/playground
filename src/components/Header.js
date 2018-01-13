@@ -1,10 +1,11 @@
 // LICENSE : MIT
 "use strict";
 import { element } from "decca";
+
 const menuItems = [
     {
         title: "Rules",
-        url: "https://github.com/azu/textlint/wiki/Collection-of-textlint-rule"
+        url: "https://github.com/textlint/textlint/wiki/Collection-of-textlint-rule"
     },
     {
         title: "Documentation",
@@ -16,10 +17,11 @@ const menuItems = [
     }
 ];
 export const Logo = {
-    render() {
+    render(props) {
         return (
             <a className="Logo" title="textlint" href="/">
-                <img className="Logo-img" alt="textlint" src="img/textlint-logo.png" />
+                <img class="Logo-img" alt="textlint" src="img/textlint-icon_256x256.png" />
+                <span class="Logo-text">{props.children}</span>
             </a>
         );
     }
@@ -50,7 +52,7 @@ export const Header = {
     render({ props }) {
         return (
             <div className="Header">
-                <Logo />
+                <Logo>textlint</Logo>
                 <HeaderMenu menuItems={menuItems} />
             </div>
         );

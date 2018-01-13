@@ -1,7 +1,8 @@
 @import "../color.css";
 @import "./_var-layout.css";
+
 .Header {
-    background-color: #fbfbfb;
+    background-color: var(--HeaderBackgroundColor);
     padding: 5px 0;
     display: flex;
 }
@@ -9,10 +10,6 @@
 .Header .Logo {
     margin-right: auto;
     padding: 0.5rem var(--left-start-padding);
-    display: flex;
-    justify-content: flex-start;
-    align-items: baseline;
-    flex-direction: row;
 }
 
 .HeaderMenuNav {
@@ -48,11 +45,26 @@
 .HeaderMenuItem:last-child {
     padding-right: 0;
 }
+
 /* link color*/
 .HeaderMenuItem a {
     color: var(--MenuLinkColor);
 }
 
+.Logo {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
 .Logo-img {
     height: 40px;
+    flex: 1;
+}
+
+.Logo-text {
+    flex: 1;
+    padding-left: 0.5em;
+    font-size: 22px;
+    color: var(--MenuLinkColor);
 }

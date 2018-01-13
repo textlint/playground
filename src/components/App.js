@@ -36,15 +36,12 @@ const App = {
         return (
             <div class="App">
                 <Header />
-                <Leading />
-                <WhatIsTextLint />
                 <TextlintDemo
                     enabledRules={enabledRules}
                     disabledRules={disabledRules}
                     ruleErrors={ruleErrors}
                     text={text}
                 />
-                <Fixable />
                 <Footer />
             </div>
         );
