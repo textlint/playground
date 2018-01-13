@@ -34,7 +34,7 @@
     "clean": "rimraf public/build/"
   },
   "dependencies": {
-    "@textlint/kernel": "^2.0.3",
+    "@textlint/kernel": "^2.0.4",
     "camelcase": "^4.1.0",
     "codemirror": "^5.33.0",
     "decca": "^2.3.0",
@@ -43,10 +43,11 @@
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
     "textlint-message-to-codemirror": "^1.0.0",
-    "textlint-plugin-markdown": "^4.0.4",
+    "textlint-plugin-markdown": "^4.0.5",
     "textlint-rule-alex": "^1.0.1",
     "textlint-rule-common-misspellings": "^1.0.1",
     "textlint-rule-no-todo": "^2.0.0",
+    "textlint-rule-rousseau": "^1.4.5",
     "textlint-rule-unexpanded-acronym": "^1.2.1",
     "textlint-rule-write-good": "^1.6.2"
   },

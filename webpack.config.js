@@ -1,3 +1,4 @@
+const fs = require("fs");
 const path = require("path");
 const webpack = require("webpack");
 module.exports = {
@@ -18,8 +19,8 @@ module.exports = {
             { test: /\.css$/, loader: "style-loader!css-loader" },
             {
                 test: /\.js$/,
-                exclude: /node_modules/,
-                loader: "babel-loader"
+                loader: "babel-loader",
+                exclude: /node_modules/
             }
         ]
     },

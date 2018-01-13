@@ -15,8 +15,8 @@ export default [
     },
     {
         id: 3,
-        name: "textlint-rule-write-good",
-        rule: require("textlint-rule-write-good").default,
+        name: "textlint-rule-rousseau",
+        rule: require("textlint-rule-rousseau"),
         enable: true
     },
     {

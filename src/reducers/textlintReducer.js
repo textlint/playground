@@ -63,7 +63,7 @@ const defaultText = `# Textlint
 
 The pluggable linting tool for text and markdown.
 
-\`textlint\` is very usefull!
+The \`textlint\` is very usefull.
 
 TODO: this is error by textlint-rule-no-todo
 
