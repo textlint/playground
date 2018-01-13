@@ -20,6 +20,7 @@
   },
   "scripts": {
     "start": "npm-run-all clean --parallel watch:css server",
+    "wait-start": "wait-on http://localhost:8080",
     "build:css": "suitcss --no-lint --import-root css/ css/index.css public/build/build.css",
     "build:js": "webpack -p",
     "build": "npm-run-all --parallel build:*",
@@ -31,7 +32,10 @@
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
     "precommit": "lint-staged",
     "postcommit": "git reset",
-    "clean": "rimraf public/build/"
+    "clean": "rimraf public/build/",
+    "pretest": "yarn run wait-start",
+    "test": "cypress run",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "@textlint/kernel": "^2.0.4",
@@ -59,6 +63,7 @@
     "babel-preset-env": "^1.6.1",
     "cross-env": "^5.1.3",
     "css-loader": "0.28.8",
+    "cypress": "^1.4.1",
     "gh-pages": "1.1.0",
     "husky": "^0.14.3",
     "lint-staged": "^6.0.0",
@@ -69,6 +74,7 @@
     "style-loader": "^0.19.1",
     "suitcss-preprocessor": "4.0.0",
     "suitcss-utils": "3.0.0",
+    "wait-on": "^2.1.0",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.10.1"
   },

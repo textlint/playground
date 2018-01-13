@@ -1,6 +1,10 @@
 sudo: false
 language: node_js
 node_js: node
+script:
+  - yarn start &
+  - yarn run wait-start
+  - npm test
 after_success:
   - |
 

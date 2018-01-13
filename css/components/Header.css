@@ -55,6 +55,7 @@
     display: flex;
     align-content: center;
     align-items: center;
+    text-decoration: none;
 }
 
 .Logo-img {
