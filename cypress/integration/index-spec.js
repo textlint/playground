@@ -8,13 +8,13 @@ describe("The Home Page", function() {
         cy.visit("/");
 
         cy.get(".TextlintErrorList-listItem").should(e => {
-            assert.ok(e.length === 4);
+            assert.ok(e.length > DefaultErrorList);
         });
     });
     it("Delete all text and disappear error list items", function() {
         cy.visit("/");
         cy.get(".TextlintErrorList-listItem").should(e => {
-            assert.ok(e.length === DefaultErrorList);
+            assert.ok(e.length > DefaultErrorList);
         });
 
         cy
