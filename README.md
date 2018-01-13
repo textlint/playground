@@ -20,6 +20,23 @@ Currently, only use built-in rule in the playground.
 
     yarn start
 
+## Testing
+
+This project use [Cypress](https://www.cypress.io/ "Cypress") for E2E Testing.
+
+
+    # start local server
+    yarn start
+    # In other tab, start cypress
+    yarn run cypress:open
+    
+Or
+
+    # start local server
+    yarn start
+    # In other tab, start cypress
+    yarn test
+
 ## Contributing
 
 1. Fork it!
