@@ -1,4 +1,4 @@
-# playground
+# playground [![Build Status](https://travis-ci.org/textlint/playground.svg?branch=master)](https://travis-ci.org/textlint/playground)
 
 textlint online playground.
 
