@@ -11,7 +11,7 @@ export const Footer = {
                         <a href="https://github.com/textlint/playground">GitHub</a>
                     </li>
                     <li className="Footer-list-item">
-                        Copyright © 2014- <a href="https://github.com/azu">@azu</a> All rights reserved.
+                        Copyright © 2014- <a href="https://github.com/textlint">@textlint</a> All rights reserved.
                     </li>
                 </ul>
             </div>
