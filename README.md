@@ -10,7 +10,7 @@ Currently, only use built-in rule in the playground.
 
 ## Embed mode
 
-    <iframe src="https://textlint.github.io/playground?embed" />
+    <iframe width="800" height="500" src="https://textlint.github.io/playground?embed" />
 
 ## Installation
 
