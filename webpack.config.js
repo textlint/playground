@@ -9,13 +9,14 @@ module.exports = {
     entry: {
         build: "./src/index.js"
     },
+    mode: process.env.NODE_ENV !== "production" ? "development" : "production",
     output: {
         path: path.join(__dirname, "public", "build"),
         publicPath: "/build/",
         filename: "bundle.js"
     },
     module: {
-        loaders: [
+        rules: [
             { test: /\.css$/, loader: "style-loader!css-loader" },
             {
                 test: /\.js$/,
