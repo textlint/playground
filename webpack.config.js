@@ -28,6 +28,7 @@ module.exports = {
                 cache: true,
                 parallel: true,
                 uglifyOptions: {
+                    // FIXME: https://github.com/webpack/webpack/issues/6760
                     compress: {
                         inline: 1
                     },
