@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{457:function(e,n,l){"use strict";l.r(n),l.d(n,"defaultRuleList",function(){return t});var t=[{id:1,name:"textlint-rule-no-todo",rule:l(456),enable:!0},{id:2,name:"textlint-rule-unexpanded-acronym",rule:l(452),enable:!0},{id:3,name:"textlint-rule-rousseau",rule:l(437),enable:!0},{id:4,name:"textlint-rule-alex",rule:l(397),enable:!0},{id:5,name:"textlint-rule-common-misspellings",rule:l(280).default,enable:!0}]}}]);
+//# sourceMappingURL=defaultRuleList.bundle.js.map
