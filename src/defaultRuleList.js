@@ -1,6 +1,6 @@
 // LICENSE : MIT
 "use strict";
-export default [
+export const defaultRuleList = [
     {
         id: 1,
         name: "textlint-rule-no-todo",

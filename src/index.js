@@ -3,7 +3,6 @@ import { applyMiddleware, createStore } from "redux";
 import { createLogger } from "redux-logger";
 import textlintApp from "./reducers/textlintReducer";
 import App from "./components/App";
-import defaultRuleList from "./defaultRuleList";
 import { updateRuleList, enableEmbedMode } from "./actions/textlintActions";
 
 const { createRenderer } = dom;
@@ -32,4 +31,6 @@ if (location.search.indexOf("embed") !== -1) {
     store.dispatch(enableEmbedMode());
 }
 // Update with initial data
-store.dispatch(updateRuleList(defaultRuleList));
+import(/* webpackChunkName: "defaultRuleList", webpackPrefetch: true */ "./defaultRuleList").then(module => {
+    store.dispatch(updateRuleList(module.defaultRuleList));
+});
