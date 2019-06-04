@@ -4,13 +4,13 @@ export const defaultRuleList = [
     {
         id: 1,
         name: "textlint-rule-no-todo",
-        rule: require("textlint-rule-no-todo"),
+        rule: require("textlint-rule-no-todo").default,
         enable: true
     },
     {
         id: 2,
         name: "textlint-rule-unexpanded-acronym",
-        rule: require("textlint-rule-unexpanded-acronym"),
+        rule: require("textlint-rule-unexpanded-acronym").default,
         enable: true
     },
     {
