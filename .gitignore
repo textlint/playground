@@ -4,7 +4,7 @@
 logs
 *.log
 /bundle
-
+public/build
 # Runtime data
 pids
 *.pid

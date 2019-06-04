@@ -1,19 +1,22 @@
 {
   "presets": [
     [
-      "env",
+      "@babel/preset-env",
       {
         "targets": {
-          "browsers": ["last 2 versions", "> 2%"]
+          "browsers": [
+            "last 2 versions",
+            "> 2%"
+          ]
         },
         "modules": false
       }
     ]
   ],
   "plugins": [
-    "syntax-dynamic-import",
+    "@babel/plugin-syntax-dynamic-import",
     [
-      "transform-react-jsx",
+      "@babel/plugin-transform-react-jsx",
       {
         "pragma": "element"
       }
