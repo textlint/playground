@@ -30,8 +30,6 @@
     "deploy": "gh-pages -b master -d ./public --repo git@github.com:textlint/playground.git",
     "server": "cross-env NODE_ENV=development webpack-dev-server --hot --content-base ./public",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
-    "precommit": "lint-staged",
-    "postcommit": "git reset",
     "clean": "rimraf public/build/",
     "pretest": "yarn run wait-start",
     "test": "cypress run",
@@ -96,5 +94,11 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "post-commit": "git reset",
+      "pre-commit": "lint-staged"
+    }
   }
 }
